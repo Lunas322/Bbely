@@ -11,11 +11,10 @@ function HeaderSub({text,icons,Page}:HeaderSubProps) {
   return (
    <>
    
-    {Page === "search" &&  
-        <button className="w-12 h-12 flex items-center">
+    {Page === "home" ? null :  <button className="w-12 h-12 flex items-center">
             <GoChevronLeft className="w-9 h-9" />
         </button>}
-    {/* 차후 각 아이콘 버튼을 상단의 버튼으로 컴포넌트를 만들어 공통 컴포넌트화 예정 */}
+    {/* 차후 각 아이콘 버튼을 상단의 버튼으로 컴포넌트를 만들어 공통 컴포넌트화 */}
 
     {pageContent}       
   
