@@ -1,6 +1,7 @@
 import { GoChevronLeft, GoChevronRight } from "react-icons/go"
 import { bannerMockData } from "../Mock/bannerMockData"
 import { useEffect, useState } from "react"
+import BannerButton from "../common/BannerButton"
 
 
 
@@ -41,7 +42,7 @@ if(count > 900) {
     return (
         <>
         <div className="w-150 h-75 flex flex-row overflow-hidden justify-between items-center relative ">
-        <button className="w-10 h-10 bg-gray-800 opacity-40 flex justify-center z-1 items-center absolute left-0" onClick={downCount}><GoChevronLeft className="w-full h-full text-[#FFFFFF]"/></button>
+        <BannerButton onClick={downCount} direction="LEFT"/>
         <div className="flex transition-transform duration-500"
         style={{transform:`translateX(-${count}%)`}}>
         {bannerMockData.map((item)=>{
@@ -50,8 +51,8 @@ if(count > 900) {
             )
         })}
         </div>
-         <button className="w-10 h-10 bg-gray-800 opacity-40 flex justify-center z-1 items-center absolute right-0 " onClick={upCount}><GoChevronRight className="w-full h-full text-[#FFFFFF] "/></button>
-             <div className="absolute bottom-2 right-2 px-3 py-1 bg-gray-700 opacity-60 rounded-3xl text-white text-sm">
+         <BannerButton onClick={upCount} direction="RIGHT"/>
+             <div className="absolute bottom-2 right-2 px-3 py-1 bg-gray-800/40  rounded-3xl text-[#FFFFFF] text-sm">
     {startIndex+1} | {maxIndex}</div>
         </div>
 
