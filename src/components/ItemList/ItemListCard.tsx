@@ -16,7 +16,7 @@ function ItemListCard ({cardSize,discount,shop,itemTitle,img,price}:itemListCard
         <div className="w-[198.66px] h-[342.39px]">
         <img src={img} alt="" className="w-full h-[238.39px]"/>
         <div className="pt-2 px-2">
-        <div className="fles justify-start text-xs text-[#777777] ">
+        <div className="flex justify-start text-xs text-[#777777] ">
             <p className="font-bold">{shop}</p>
             <p>{itemTitle}</p>
         </div>
