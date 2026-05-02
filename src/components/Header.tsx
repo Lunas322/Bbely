@@ -4,7 +4,7 @@ import { MdOutlineShoppingBag } from "react-icons/md"
 
 function Header() {
   return (
-    <div className="w-150 h-27">
+    <div className="w-150 h-27 fixed top-0 z-20 bg-[#FFFFFF] ">
         <HeaderTop/>
       <div className="w-150 h-12 flex items-center justify-between ">
         <HeaderSub icons={[MdOutlineShoppingBag]} text="" Page="home"/>
