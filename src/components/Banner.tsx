@@ -36,7 +36,7 @@ setCount})
 
     return (
         <>
-        <div className="w-150 h-75 flex flex-row overflow-hidden justify-between items-center relative ">
+        <div className="w-150 h-75 flex flex-row overflow-hidden justify-between items-center relative mt-27 ">
         <BannerButton onClick={downCount} direction="LEFT"/>
 
         <div className="flex transition-transform duration-500"
