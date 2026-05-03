@@ -10,10 +10,10 @@ type itemListCardProps = {
 }
 
 function ItemListCard ({cardSize,discount,shop,itemTitle,img,price}:itemListCardProps) {
-    const cardSizeStyle = cardSize === "S" ? "w-[198.66px] h-[342.39px]" : "w-[280px] h-[430px]"
-    const imgSizeStyle = cardSize === "S" ? "w-full h-[238.39]" : "w-full  h-[358.8px]"
-    function sliceText (text:string) {
-        return text.length > 25 ? text.slice(0,25)+'...' : text
+    const cardSizeStyle = cardSize === "S" ? "w-full h-[342.39px]" : "w-full h-[430px]"
+    const imgSizeStyle = cardSize === "S" ? "w-full h-[238.39]" : "w-full h-[358.8px]"
+    function sliceText (text:string,maxIndex:number) {
+        return text.length > maxIndex ? text.slice(0,maxIndex)+'...' : text
 
     }
     return(
@@ -24,7 +24,7 @@ function ItemListCard ({cardSize,discount,shop,itemTitle,img,price}:itemListCard
         <div className="pt-2 px-2">
         <div className="flex justify-start flex-col text-xs text-[#777777] ">
             <p className="font-bold">{shop}</p>
-            <p>{sliceText(itemTitle)}</p>
+            <p>{cardSize === "S" ? sliceText(itemTitle,16) : sliceText(itemTitle,25) }</p>
         </div>
         <div className="flex justify-start">
             <p className=" text-red-600 font-black">{discount}%</p>
