@@ -1,21 +1,10 @@
-type cardSize = 'S'|'L'
-
-type itemListCardProps = {
-    cardSize : cardSize
-    discount: number|null
-    shop: string
-    itemTitle: string
-    img: string
-    price: string
-}
+import { itemListCardProps } from "../../types/items"
+import { sliceText } from "../../utils/sliceText"
 
 function ItemListCard ({cardSize,discount,shop,itemTitle,img,price}:itemListCardProps) {
     const cardSizeStyle = cardSize === "S" ? "w-full h-[342.39px]" : "w-full h-[430px]"
     const imgSizeStyle = cardSize === "S" ? "w-full h-[238.39]" : "w-full h-[358.8px]"
-    function sliceText (text:string,maxIndex:number) {
-        return text.length > maxIndex ? text.slice(0,maxIndex)+'...' : text
 
-    }
     return(
         <>
         
