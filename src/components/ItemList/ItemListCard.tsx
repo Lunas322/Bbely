@@ -16,7 +16,7 @@ function ItemListCard ({cardSize,discount,shop,itemTitle,img,price}:itemListCard
             <p>{cardSize === "S" ? sliceText(itemTitle,16) : sliceText(itemTitle,25) }</p>
         </div>
         <div className="flex justify-start">
-            <p className=" text-red-600 font-black">{discount}%</p>
+            <p className=" text-red-600 font-black">{discount=== null ? null : discount+'%'}</p>
             <p className="font-black ml-1.5">{price}</p>
         </div>
         </div>

@@ -11,7 +11,7 @@ import ItemListCard from "./ItemListCard"
 function ItemContainer () {
     return (
         <>
-        <div className="w-150 h-auto grid grid-cols-6 gap-4 ">
+        <div className="w-150 h-auto grid grid-cols-6 gap-4 pb-11">
         {itemMockData.map((item, index)=>{
             const cardSize = index < 3 ? 'S' : 'L'
             const cardStyle = cardSize === 'S' ? 'col-span-2' : 'col-span-3'
