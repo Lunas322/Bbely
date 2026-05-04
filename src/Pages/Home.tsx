@@ -10,7 +10,7 @@ function Home() {
     return(
         <>
         <div className="w-full flex flex-col items-center">
-            <Header/>
+            <Header Page="home"/>
             <Banner/>
             <Category/>
             <LinBar/>
