@@ -13,7 +13,7 @@ function ItemListCard ({cardSize,discount,shop,itemTitle,img,price}:itemListCard
         <div className="pt-2 px-2">
         <div className="flex justify-start flex-col text-xs text-[#777777] ">
             <p className="font-bold">{shop}</p>
-            <p>{cardSize === "S" ? sliceText(itemTitle,16) : sliceText(itemTitle,25) }</p>
+            <p>{cardSize === "S" ? sliceText(itemTitle,13) : sliceText(itemTitle,23) }</p>
         </div>
         <div className="flex justify-start">
             <p className=" text-red-600 font-black">{discount=== null ? null : discount+'%'}</p>

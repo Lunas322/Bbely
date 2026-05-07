@@ -8,7 +8,7 @@ export const itemMockData = [
     {img:'https://d3ha2047wt6x28.cloudfront.net/TjYkJbBn0hU/pr:NEW_GOODS_THUMB_WEBP/czM6Ly9hYmx5LWltYWdlLWxlZ2FjeS9kYXRhL2dvb2RzL2VlZmQ3YjFjZjM2ZGNkY2QwZThkYTQ3NTYwMjY1ZGY3LmpwZw', shop:'초코송이무슨맛', itemTitle:'이거 입으면 나도 래퍼여친!', discount:40, price:'32,980', id:6},
     {img:'https://d3ha2047wt6x28.cloudfront.net/lgSW0hRywro/pr:GOODS_DETAIL/czM6Ly9hYmx5LWltYWdlLWxlZ2FjeS9kYXRhL2dvb2RzLzIwMjYwNDE3XzE3NzY0MDAwMjM0MzczNDZtLmpwZWc',shop:'토마토스터디', itemTitle:'토마토스터디 필수템!', discount:11,price:'22,300',id:7},
     {img:'https://d3ha2047wt6x28.cloudfront.net/Gq3FOqwtfNg/pr:GOODS_DETAIL/czM6Ly9hYmx5LWltYWdlLWxlZ2FjeS9kYXRhL2dvb2RzLzIwMjYwNDI1XzE3NzcxMDg1NDc4MTAzMzltLmpwZw',shop:'역사전문', itemTitle:'이것만 있으면 나도 꽁치!', discount:35, price:'42,000',id:8},
-    {img:'https://d3ha2047wt6x28.cloudfront.net/uHRvNhDCmag/pr:GOODS_DETAIL/czM6Ly9hYmx5LWltYWdlLWxlZ2FjeS9kYXRhL2dvb2RzLzIwMjYwMzI1XzE3NzQ0NDQzNTYxMzg5MzltLmpwZWc', shop:'몽요즈',itemTitle:'트랙바람막이!봄-가을까지 쭉가능', discount:null,price:'25,000', id:9},
+    {img:'https://d3ha2047wt6x28.cloudfront.net/FkPtQCK_vOU/pr:NEW_GOODS_THUMB_STILL/czM6Ly9hYmx5LWltYWdlLWxlZ2FjeS9kYXRhL2dvb2RzL2UwYWIxNjNkYjNiNTdlZTRiMTY3ZWM3MjcxY2I2Mzg3LmdpZg', shop:'몽요즈',itemTitle:'트랙바람막이!봄-가을까지 쭉가능', discount:null,price:'25,000', id:9},
     {img: 'https://d3ha2047wt6x28.cloudfront.net/0DIDoXH_5lM/pr:NEW_GOODS_THUMB_STILL/czM6Ly9hYmx5LWltYWdlLWxlZ2FjeS9kYXRhL2dvb2RzLzM4NjY2NWI4Y2ZjMzZlZjAzNTRlMDc5MWZiN2FiNDAwLmpwZw',shop:'영국남자', itemTitle:'거기 조교님 이거 한번 써보슈', discount:20, price:'5,500',id:10},
 
 
