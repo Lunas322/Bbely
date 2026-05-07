@@ -1,5 +1,7 @@
 import HeaderInput from "../common/HeaderInput.tsx"
 export const PageMap = {
-    home: <HeaderInput disabled={true}/>,
-    search: <HeaderInput disabled={false} />
+     home: (props:any) => <HeaderInput {...props} disabled={true}/>,
+
+    search: (props:any) =>  <HeaderInput {...props} disabled={false} />
+    
 }
