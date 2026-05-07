@@ -7,8 +7,8 @@ import { useNavigate } from "react-router-dom"
 
 
 
-function HeaderSub({text,icons,Page}:HeaderSubProps) {
-    const pageContent = Page ? PageMap[Page] : <Title text={text??""}/>
+function HeaderSub({text,icons,Page,setSearch}:HeaderSubProps) {
+    const pageContent = Page ? PageMap[Page]?.({setSearch}) : <Title text={text??""}/>
     const nav = useNavigate()
   return (
    <>
