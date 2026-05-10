@@ -7,4 +7,5 @@ export type itemListCardProps = {
     itemTitle: string
     img: string
     price: string
+    id:number
 }
