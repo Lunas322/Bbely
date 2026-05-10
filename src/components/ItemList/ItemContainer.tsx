@@ -3,7 +3,7 @@
 import { itemMockData } from "../../Mock/itemMockData"
 import ItemListCard from "./ItemListCard"
 
-function ItemContainer ({ search }: { search: string }) {
+function ItemContainer ({ search }: { search?: string }) {
    const filterData  = search ? itemMockData.filter(item=>item.itemTitle.includes(search)):itemMockData
     
 
@@ -22,6 +22,7 @@ function ItemContainer ({ search }: { search: string }) {
                 discount={item.discount}
                 shop={item.shop}
                 cardSize={cardSize}
+                id={item.id}
                 />
                 </div>
             )
