@@ -9,3 +9,8 @@ export type itemListCardProps = {
     price: string
     id:number
 }
+
+export type modalOption = {
+    color?: string[]
+    size?: string[]
+}
