@@ -6,11 +6,12 @@ export type itemListCardProps = {
     shop: string
     itemTitle: string
     img: string
-    price: string
+    price: number
     id:number
 }
 
 export type modalOption = {
     color?: string[]
     size?: string[]
+    price?: number
 }

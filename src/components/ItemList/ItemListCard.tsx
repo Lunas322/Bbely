@@ -21,7 +21,7 @@ function ItemListCard ({cardSize,discount,shop,itemTitle,img,price,id}:itemListC
         </div>
         <div className="flex justify-start">
             <p className=" text-red-600 font-black">{discount=== null ? null : discount+'%'}</p>
-            <p className="font-black ml-1.5">{price}</p>
+            <p className="font-black ml-1.5">{price.toLocaleString()+'원'}</p>
         </div>
         </div>
         </div>

@@ -31,11 +31,11 @@ const item = itemMockData.find((item)=> item.id === Number(id))
                 <div className="w-full h-fit bg-[#5B35FF12] rounded-xl p-3  ">
                     <div className="flex gap-2">
                         <p className="text-[#5B35FF] text-xl font-black">{item?.discount === null ? null : item?.discount+ '%'}</p>
-                        <p className="text-xl font-black">{item?.price}원</p>
+                        <p className="text-xl font-black">{item?.price.toLocaleString()}원</p>
                     </div>
                 </div>
             </div>
-            <ItemModal color={item?.color} size={item?.size}/>                                                                       
+            <ItemModal color={item?.color} size={item?.size} price={item?.price} />                                                                       
         </div>
         </>
     )
