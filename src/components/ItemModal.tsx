@@ -49,7 +49,12 @@ function ItemModal ({color,size,}:modalOption) {
                 })}
                 </div>
                 </div>
+                <div className="flex justify-between items-center">
+                    <div className="w-70 bg-[#FFFFFF] h-14  rounded-xl text-balck border border-[#7777773a] font-black text-xl flex justify-center items-center">장바구니</div>
+                    <div className="w-70 bg-black h-14  rounded-xl text-[#FFFFFF] font-black text-xl flex justify-center items-center">구매하기</div>
+                </div>    
                 </div>
+                
             </div>
         </>
     )
