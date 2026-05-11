@@ -2,22 +2,8 @@ import { useParams } from "react-router-dom"
 import LinBar from "../common/LineBar"
 import Header from "../components/Header"
 import { itemMockData } from "../Mock/itemMockData"
-import { GoArrowDown, GoArrowLeft } from "react-icons/go"
-import { useState } from "react"
 import ItemModal from "../components/ItemModal"
 
-
-// 받을 데이터 
-// 1 페이지 상품 사진
-// 2 상품 판매자 가게 이름
-// 3 상품 이름 
-// 4 가격
-// 5 할인률
-// 6 색상,사이즈
-
-
-// id와 같은것을 mock data에서 찾고 그걸 변수에 저장해서 구조분해로 사용하기?
-// 그럼 id가 일치하는 객체를 찾아야함 필터?
 
 function Detail () {
 
