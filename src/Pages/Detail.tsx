@@ -3,9 +3,10 @@ import LinBar from "../common/LineBar"
 import Header from "../components/Header"
 import { itemMockData } from "../Mock/itemMockData"
 import ItemModal from "../components/ItemModal"
+import { cartDataProps } from "../types/items"
 
 
-function Detail () {
+function Detail ({cartData,setCartData}:cartDataProps) {
 
 
 
@@ -26,7 +27,7 @@ const item = itemMockData.find((item)=> item.id === Number(id))
             <LinBar/>
             <div className="w-150 h-49 p-4">
                 <div>
-                   <p className="w-full h-10 font-medium text-sm">{item?.itemTitle}</p>  
+                    <p className="w-full h-10 font-medium text-sm">{item?.itemTitle}</p>  
                 </div>
                 <div className="w-full h-fit bg-[#5B35FF12] rounded-xl p-3  ">
                     <div className="flex gap-2">
@@ -35,7 +36,7 @@ const item = itemMockData.find((item)=> item.id === Number(id))
                     </div>
                 </div>
             </div>
-            <ItemModal color={item?.color} size={item?.size} price={item?.price} />                                                                       
+            <ItemModal color={item?.color} size={item?.size} price={item?.price} img={item?.img} cartData={cartData} setCartData={setCartData} />                                                                       
         </div>
         </>
     )
