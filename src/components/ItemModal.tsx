@@ -1,15 +1,11 @@
 import { modalOption } from "../types/items";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ModalOption from "./ModalOption";
 import OptionBar from "../common/OptionBar";
+import { Item } from "../types/items";
 
-type Item = {
-  size: string;
-  color: string;
-  count: number;
-};
 
-function ItemModal({ color, size, price }: modalOption) {
+function ItemModal({ color, size, price,img, cartData, setCartData }: modalOption) {
   const [show, setShow] = useState({
     color: false,
     size: false,
@@ -57,14 +53,44 @@ function ItemModal({ color, size, price }: modalOption) {
     );
   }
 
-  function addCart() {
-    if (select.color && select.size) {
-        return(
-      setItemArray((prev) => [...prev, { ...select, count: 1 }]),
-      setSelect({ color: "", size: "" }))
- 
-  }}
 
+  useEffect(()=>{
+    if(select.color && select.size) {
+      return(
+        setItemArray((prev)=> [...prev, {...select,count: 1}]),    setSelect({color: '', size: ''})
+
+      )
+    }
+
+  },[select.color,select.size])
+
+function addCart () {
+      if(itemArray.length === 0) {
+        return;
+      }
+      itemArray.forEach((newItem)=> 
+      {
+        const existItem = cartData.find((item)=>
+          item.color == newItem.color 
+        && item.size == newItem.size)
+
+        if (existItem) {
+          setCartData((prev)=> prev.map((item)=>{
+            return(
+              item.color === newItem.color && 
+              item.size === newItem.size ? 
+              {...item , count: item.count + newItem.count, price: price, img:img}: item
+            )
+          }))
+        } else {
+          setCartData((prev)=> [...prev, {...newItem, price: price, img:img}])
+        }
+      }
+      )
+      console.log(cartData)
+      alert('장바구니에 추가되었습니다.')
+    setItemArray([])
+    }
   return (
     <>
       <div className="w-150 h-22 bg-white fixed bottom-0 flex items-center justify-center">
