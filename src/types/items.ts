@@ -16,6 +16,7 @@ export type modalOption = {
     price?: number
     img?: string
     cartData: Item[]
+    itemTitle?: string
     setCartData: React.Dispatch<React.SetStateAction<Item[]>>
 }
 

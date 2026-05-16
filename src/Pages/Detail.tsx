@@ -36,7 +36,7 @@ const item = itemMockData.find((item)=> item.id === Number(id))
                     </div>
                 </div>
             </div>
-            <ItemModal color={item?.color} size={item?.size} price={item?.price} img={item?.img} cartData={cartData} setCartData={setCartData} />                                                                       
+            <ItemModal color={item?.color} size={item?.size} itemTitle={item?.itemTitle} price={item?.price} img={item?.img} cartData={cartData} setCartData={setCartData} />                                                                       
         </div>
         </>
     )

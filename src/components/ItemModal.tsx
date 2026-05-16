@@ -5,7 +5,7 @@ import OptionBar from "../common/OptionBar";
 import { Item } from "../types/items";
 
 
-function ItemModal({ color, size, price,img, cartData, setCartData }: modalOption) {
+function ItemModal({ color, size, price,img, cartData,itemTitle, setCartData }: modalOption) {
   const [show, setShow] = useState({
     color: false,
     size: false,
@@ -61,6 +61,7 @@ function ItemModal({ color, size, price,img, cartData, setCartData }: modalOptio
 
       )
     }
+    localStorage
 
   },[select.color,select.size])
 
@@ -79,11 +80,11 @@ function addCart () {
             return(
               item.color === newItem.color && 
               item.size === newItem.size ? 
-              {...item , count: item.count + newItem.count, price: price, img:img}: item
+              {...item , count: item.count + newItem.count, price: price, img:img, itemTitle: itemTitle}: item
             )
           }))
         } else {
-          setCartData((prev)=> [...prev, {...newItem, price: price, img:img}])
+          setCartData((prev)=> [...prev, {...newItem, price: price, img:img, itemTitle: itemTitle}])
         }
       }
       )
