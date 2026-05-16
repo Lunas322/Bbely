@@ -1,14 +1,18 @@
+import { useNavigate } from "react-router-dom"
 import { itemListCardProps } from "../../types/items"
 import { sliceText } from "../../utils/sliceText"
 
-function ItemListCard ({cardSize,discount,shop,itemTitle,img,price}:itemListCardProps) {
+function ItemListCard ({cardSize,discount,shop,itemTitle,img,price,id}:itemListCardProps) {
     const cardSizeStyle = cardSize === "S" ? "w-full h-[342.39px]" : "w-full h-[430px]"
     const imgSizeStyle = cardSize === "S" ? "w-full h-[238.39]" : "w-full h-[358.8px]"
-
+    const nav = useNavigate()
+    function MoveDetail () {
+        return nav(`/detail/${id}`)
+    }
     return(
         <>
         
-        <div className={cardSizeStyle}>
+        <div className={cardSizeStyle} onClick={MoveDetail}>
         <img src={img} alt="" className={imgSizeStyle}/>
         <div className="pt-2 px-2">
         <div className="flex justify-start flex-col text-xs text-[#777777] ">
@@ -17,7 +21,7 @@ function ItemListCard ({cardSize,discount,shop,itemTitle,img,price}:itemListCard
         </div>
         <div className="flex justify-start">
             <p className=" text-red-600 font-black">{discount=== null ? null : discount+'%'}</p>
-            <p className="font-black ml-1.5">{price}</p>
+            <p className="font-black ml-1.5">{price.toLocaleString()+'원'}</p>
         </div>
         </div>
         </div>
