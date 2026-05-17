@@ -6,6 +6,7 @@ import Search from './Pages/Search'
 import { useState } from 'react'
 import { Item } from './types/items'
 import Cart from './Pages/Cart'
+import User from './Pages/User'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/search" element={<Search/>}/>
         <Route path="/detail/:id" element={<Detail cartData={cartData} setCartData={setCartData}/>}/>
         <Route path='/cart' element={<Cart cartData={cartData} setCartData={setCartData}/>}/>
+        <Route path='/my' element={<User cartData={cartData} userName='토마토'/>}/>
       </Routes>
     </Router>
   )
