@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './index.css'
-import Header from './components/Header'
 import Home from './Pages/Home'
 import Detail from './Pages/Detail'
 import Search from './Pages/Search'
 import { useState } from 'react'
 import { Item } from './types/items'
+import Cart from './Pages/Cart'
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/search" element={<Search/>}/>
         <Route path="/detail/:id" element={<Detail cartData={cartData} setCartData={setCartData}/>}/>
-
+        <Route path='/cart' element={<Cart cartData={cartData} setCartData={setCartData}/>}/>
       </Routes>
     </Router>
   )

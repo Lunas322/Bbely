@@ -1,8 +1,7 @@
-import { modalOption } from "../types/items";
+import { modalOption, SelectedItem } from "../types/items";
 import { useEffect, useState } from "react";
 import ModalOption from "./ModalOption";
 import OptionBar from "../common/OptionBar";
-import { Item } from "../types/items";
 
 
 function ItemModal({ color, size, price,img, cartData,itemTitle, setCartData }: modalOption) {
@@ -17,7 +16,7 @@ function ItemModal({ color, size, price,img, cartData,itemTitle, setCartData }: 
     color: "",
   });
 
-  const [itemArray, setItemArray] = useState<Item[]>([]);
+  const [itemArray, setItemArray] = useState<SelectedItem[]>([]);
 
   const isSize = show.size ? "max-h-60 opacity-100" : "max-h-0 opacity-0";
   const isColor = show.color ? "max-h-60 opacity-100" : "max-h-0 opacity-0";
@@ -61,8 +60,6 @@ function ItemModal({ color, size, price,img, cartData,itemTitle, setCartData }: 
 
       )
     }
-    localStorage
-
   },[select.color,select.size])
 
 function addCart () {
@@ -84,7 +81,7 @@ function addCart () {
             )
           }))
         } else {
-          setCartData((prev)=> [...prev, {...newItem, price: price, img:img, itemTitle: itemTitle}])
+          setCartData((prev)=> [...prev, {...newItem, price: price, img:img, itemTitle: itemTitle, id: Date.now()}])
         }
       }
       )

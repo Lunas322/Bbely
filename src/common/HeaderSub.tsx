@@ -20,7 +20,7 @@ function HeaderSub({text,icons,Page,setSearch}:HeaderSubProps) {
 
     {pageContent}       
   
-   <div className="flex justify-between gap-3.5">
+   <div className="flex justify-between gap-3.5" onClick={()=>nav('/cart')}>
     {icons?.map((Icon, index) => (
       <Icon key={index} className="w-8 h-8" />
     ))}
