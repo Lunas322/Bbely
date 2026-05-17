@@ -1,10 +1,11 @@
 
 import { bannerMockData } from "../Mock/bannerMockData"
 import { useState } from "react"
-import BannerButton from "../common/BannerButton"
+import BannerButton from "./BannerButton"
 import useAutoSlide from "../hooks/useAutoSlide"
 import useInfinitelLoop from "../hooks/useInfiniteLoop"
-import IndexView from "../common/IndexView"
+import IndexView from "../components/IndexView"
+
 
 
 
