@@ -1,37 +1,14 @@
 import LinBar from "../common/LineBar"
 import Header from "../common/Header"
 import { cartDataProps } from "../types/items"
+import { updateItemCount } from "../utils/updateItemCount"
 
 function Cart ({cartData,setCartData}:cartDataProps) {
 
 
-
-    function addEa (id:number) {
-        setCartData((prev)=> prev.map((item)=> {
-            if (item.id === id) {
-                return {...item, count: item.count +1}
-            }
-            return item
-        }))
-    
-    }
-
-    function deliteEa (id:number) {
-        setCartData((prev)=> prev.map((item)=>{
-            if(item.id === id && item.count > 0) {
-                return {...item, count: item.count -1}
-            }
-            return(item)
-            
-        }).filter((item)=> item.count !== 0))
-    }
-
     function itemDelite (id:number) {
         setCartData((prev)=> prev.filter((item)=> item.id !== id))
     }
-
-
-
     const totalPrice = cartData.reduce((acc,item)=> acc+ item.price * item.count, 0)
     const totaalItem = cartData.reduce((acc,item)=> acc + item.count ,0)
 
@@ -74,9 +51,9 @@ function Cart ({cartData,setCartData}:cartDataProps) {
                         </div>
                         <div className="flex w-120 justify-between  items-center">
                             <div className="w-26 h-fit flex justify-between items-center">
-                    <button className="w-8 h-8 rounded-full bg-[#77777722]" onClick={()=>deliteEa(item.id)}>ㅡ</button>
+                    <button className="w-8 h-8 rounded-full bg-[#77777722]" onClick={()=>updateItemCount({id:item.id,setCartData,type:'delete'})}>ㅡ</button>
                     <h2>{item.count}</h2>
-                    <button className="w-8 h-8 rounded-full bg-[#7777771c]" onClick={()=>addEa(item.id)}>+</button>
+                    <button className="w-8 h-8 rounded-full bg-[#7777771c]" onClick={()=>updateItemCount({id:item.id,setCartData,type:'delete'})}>+</button>
                     </div>
                             <div>
                                 <h3 className="font-black">{itemPrice.toLocaleString()+'원'}</h3>
