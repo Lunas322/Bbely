@@ -5,11 +5,6 @@ import { cartDataProps } from "../types/items"
 function Cart ({cartData,setCartData}:cartDataProps) {
 
 
-// 장바구니에 아무것도 안 들어있을 경우 처리
-// 자동 금액 총 합산 처리
-// 지우개 처리
-
-
 
     function addEa (id:number) {
         setCartData((prev)=> prev.map((item)=> {
@@ -50,7 +45,7 @@ function Cart ({cartData,setCartData}:cartDataProps) {
     return (
         <>
             <div className="w-full h-fit flex flex-col items-center"> 
-                <Header Page="home"/>
+                <Header text="장바구니"/>
                 <LinBar/>
                 <div className="flex justify-center pt-27 w-150  items-center">
                     <div className="flex justify-center items-center h-auto p-4 w-140 rounded-2xl flex-col mt-5 border border-[#7777773f] ">

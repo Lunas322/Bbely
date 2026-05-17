@@ -3,6 +3,7 @@ import Header from "../common/Header";
 import LinBar from "../common/LineBar";
 import { Item } from "../types/items";
 import { useNavigate } from "react-router-dom";
+import MenuBar from "../common/MenuBar";
 
 type userProps = {
   userName: string;
@@ -14,7 +15,7 @@ function User({ userName, cartData }: userProps) {
   return (
     <>
       <div className="w-full h-fit flex flex-col items-center">
-        <Header Page="home" />
+        <Header text="마이페이지" />
         <div className="w-150 h-fit gap-3 mt-10 pt-27 flex justify-center items-center flex-col">
           <div className="w-22 h-22 rounded-full bg-[#77777747] flex justify-center items-center">
             <FaUserAlt className="w-15 h-15 text-white" />
@@ -46,6 +47,7 @@ function User({ userName, cartData }: userProps) {
             <div className="p-4">로그아웃</div>
           </div>
         </div>
+        <MenuBar/>
       </div>
     </>
   );
