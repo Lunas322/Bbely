@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import LinBar from "../common/LineBar"
-import Header from "../components/Header"
+import Header from "../common/Header"
 import { itemMockData } from "../Mock/itemMockData"
 import ItemModal from "../components/ItemModal"
 import { cartDataProps } from "../types/items"

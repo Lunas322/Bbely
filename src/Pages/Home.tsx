@@ -1,9 +1,9 @@
 import LinBar from "../common/LineBar";
 import Banner from "../components/Banner";
 import Category from "../components/Cartegory/Category";
-import Header from "../components/Header";
+import Header from "../common/Header";
 import ItemContainer from "../components/ItemList/ItemContainer";
-import MenuBar from "../components/MenuBar";
+import MenuBar from "../common/MenuBar";
 import Recommend from "../components/Recommend";
 
 function Home() {

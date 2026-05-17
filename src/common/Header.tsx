@@ -1,7 +1,7 @@
-import HeaderTop from "../common/HeaderTop"
-import HeaderSub from "../common/HeaderSub"
+import HeaderTop from "../components/Header/HeaderTop"
 import { PiShoppingCartLight } from "react-icons/pi"
 import { HeaderSubProps } from "../types/header"
+import HeaderSub from "../components/Header/HeaderSub"
 
 function Header({Page,setSearch}:HeaderSubProps) {
   

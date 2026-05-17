@@ -1,5 +1,5 @@
 import { FaUserAlt } from "react-icons/fa";
-import Header from "../components/Header";
+import Header from "../common/Header";
 import LinBar from "../common/LineBar";
 import { Item } from "../types/items";
 import { useNavigate } from "react-router-dom";

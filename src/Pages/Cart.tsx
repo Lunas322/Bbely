@@ -1,5 +1,5 @@
 import LinBar from "../common/LineBar"
-import Header from "../components/Header"
+import Header from "../common/Header"
 import { cartDataProps } from "../types/items"
 
 function Cart ({cartData,setCartData}:cartDataProps) {
