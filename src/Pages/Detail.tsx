@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import LinBar from "../common/LineBar"
-import Header from "../components/Header"
+import Header from "../common/Header"
 import { itemMockData } from "../Mock/itemMockData"
 import ItemModal from "../components/ItemModal"
 import { cartDataProps } from "../types/items"
@@ -16,7 +16,7 @@ const item = itemMockData.find((item)=> item.id === Number(id))
     return (
         <>
                 <div className="w-full flex flex-col items-center "> 
-            <Header Page="home"/>
+            <Header text="상품정보"/>
             <img className="w-150 h-150 mt-27" src={item?.img} alt="" />
             <div className="flex justify-start items-center w-150 h-18 gap-4">
                 <div className="rounded-full p-2 bg-[#777777] w-12 h-12 flex justify-center items-center">

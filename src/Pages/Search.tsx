@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Header from "../components/Header";
-import MenuBar from "../components/MenuBar";
+import Header from "../common/Header";
+import MenuBar from "../common/MenuBar";
 import RecentSearch from "../components/RecentSearch";
 import SearchLank from "../components/SearchLank";
 import ItemContainer from "../components/ItemList/ItemContainer";

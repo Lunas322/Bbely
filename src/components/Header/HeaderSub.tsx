@@ -1,8 +1,8 @@
 
 import { GoChevronLeft } from "react-icons/go"
-import Title from "./Title"
-import { HeaderSubProps } from "../types/header"
-import { PageMap } from "../constants/pageMap"
+import Title from "../Title"
+import { HeaderSubProps } from "../../types/header"
+import { PageMap } from "../../constants/pageMap"
 import { useNavigate } from "react-router-dom"
 
 
